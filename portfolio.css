@@ -1,0 +1,876 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Évite les débordements horizontaux */
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* Barre de navigation */
+nav {
+   
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+  
+    position: fixed; /* Fixer la section en haut de l'écran */
+    top: 0; /* Positionner en haut */
+    left: 0;
+    width: 100%; /* Occupe toute la largeur */
+    z-index: 9999; /* Pour s'assurer qu'elle est au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet flottant */
+}
+
+
+nav .name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    
+ 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Styles pour chaque page */
+.page {
+    height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+
+/* Menu burger */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 22px; /* ajuste verticalement */
+    left: 90%;
+    transform: translateX(-50%);
+    z-index: 10000;
+}
+
+/* Responsive */
+@media screen and (max-width: 968px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul.nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul.nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle:checked + .menu-icon + ul.nav-links {
+        display: flex;
+    }
+}
+
+
+
+/* -------------------------------------------------Section Accueil------------------------------------*/
+#accueil {
+    background-color:  #DDD3CB;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 1200px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content .intro {
+    font-size: 18px;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #a98b6d;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+}
+
+.hero-content .cta {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-content .cta:hover {
+    background-color: #524dba;
+}
+
+.hero-image img {
+    border-radius: 20%;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*-----------------------------------------------Section A propos--------------------------------------*/
+.intro-content {
+    display: flex;
+    flex-wrap: nowrap; /* empêche les éléments de passer à la ligne */
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;  /* ajoute un scroll horizontal si l’écran est trop petit */
+}
+
+
+.intro-text {
+    flex: 1;
+    margin-top: 50px;
+    min-width: 650px;
+    padding: 10px 50px;
+}
+
+.intro-text h1 {
+    font-size: 1.5rem;
+    color: #333;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.intro-text p,ul {
+    line-height: 1.6;
+    color: #424242; /* Texte gris foncé */
+}
+
+.intro-text ul {
+    padding-left: 20px;
+}
+
+.intro-image {
+    flex: 1;
+    min-width: 500px;
+    text-align: center;
+}
+
+.intro-image img {
+    width: 400px;
+    height: 600px;
+    border-radius: 100px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 968px) {
+    .intro-text {
+        margin-top: 25px;
+        min-width: 650px;
+        padding-right: 10px;
+        padding-left: 50px;
+
+    }
+
+    .intro-image {
+        display: none;
+    }
+
+    .intro-image img {
+        display: none;
+    }
+  
+}
+
+/*----------------------------------------Section Formation-----------------------------------------*/
+#formation{
+    background-color: #DDD3CB;
+}
+
+.forms {
+    background-color: #dcd4cc; /* Beige clair */
+    border: 1px solid #dbd3cb; /* Beige légèrement plus foncé */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.forms h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.forms p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Responsive pour petits écrans */
+@media (max-width: 1168px) {
+    .forms {
+        width: 90%;
+        margin-top: 80px;
+        padding: 15px;
+    }
+}
+/*-------------------------------------Section Compétences---------------------------------*/
+#competences{
+    background-color: #DDD3CB;
+}
+.containers {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; /* Prend toute la largeur */
+    height: 100%; 
+    margin-top: 50px;
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #DDD3CB;
+    border-right: 2px solid #ddd;
+}
+
+.skills-section {
+    margin-bottom: 20px;
+}
+
+.skills-section h3 {
+    margin-bottom: 10px;
+    color: #29241f;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #a98b6d;
+}
+
+.skill-bar {
+    height: 10px;
+    background: rgb(225, 225, 219);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    background:  #954c0430;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    padding: 20px;
+    background-color: #DDD3CB;
+    overflow-y: auto; /* Ajouter un défilement si nécessaire */
+    max-height: 100%; /* S'assurer que la section ne déborde pas */
+}
+
+.cv-image {
+    max-width: 70%; /* Limiter la largeur de l'image à 90% du conteneur */
+    height: auto; /* Préserver les proportions */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacement entre l'image et le bouton */
+}
+
+.download-btn {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block; /* S'assurer que le bouton est bien visible */
+}
+
+.download-btn:hover {
+    background-color: #524dba;
+}
+
+/*------------------------------------------section Projects-------------------------------------------*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Introduction */
+  .intro {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 150px;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    color: #002855;
+    margin-bottom: 10px;
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  /* Cartes des projets */
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;     /* ne pas passer à la ligne */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 360px;
+    height: 260px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    font-size: 1.4rem;
+    color: #002855;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Styles pour la modale */
+  .modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.active {
+    display: flex; /* Affiche la modale */
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 50%;
+    height: 70%;
+    max-width: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Pour positionner le bouton de fermeture */
+  }
+  
+  /* Bouton de fermeture */
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .close-button:hover {
+    background-color: #c0392b;
+  }
+
+/* ---------------------------------------------Section Contacts----------------------------------- */
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDD3CB;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+  }
+  
+  .contact-left {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .contact-title {
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .contact-subtitle {
+    color: #4CAF50;
+    font-weight: 500;
+  }
+  
+  .contact-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .contact-details {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .contact-details li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-details .icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .contact-details a {
+    color: #4169E1;
+    text-decoration: none;
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+  }
+  
+  .contact-right img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  
+    .contact-right {
+      margin-top: 30px;
+    }
+  
+    .contact-left {
+      text-align: center;
+    }
+  
+    .contact-details li {
+      justify-content: center;
+    }
+  }
+  
+
+/*---------------------------------Veille Technologie--------------------------------*/
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Titres */
+header h1,
+.veille-title,
+.content h2 {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* Paragraphes */
+header p,
+.content p {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Container principal */
+main {
+    padding: 40px;
+   
+   
+}
+
+/* Section contenu */
+.content {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Bouton animé */
+.bouton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease forwards 0.8s;
+    opacity: 0;
+    transform: translateY(30px);
+    margin-left: 200px; /* Ajoute cette ligne pour aligner à droite */
+    margin-right: 20px; /* Un peu de marge à droite si tu veux qu'il ne touche pas le bord */
+}
+
+.bouton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+/* Animation d’entrée en fondu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation appliquée à l'entrée */
+.veille-title,
+.content,
+.bouton {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Delai progressif pour effet smooth */
+.veille-title { animation-delay: 0.2s; }
+.content:nth-of-type(1) { animation-delay: 0.4s; }
+.content:nth-of-type(2) { animation-delay: 0.6s; }
+.content:nth-of-type(3) { animation-delay: 0.8s; }
+.bouton { animation-delay: 1s; }
+
+
+/* Responsive Design */
+/* Responsive Design simplifié */
+@media screen and (max-width: 900px) {
+   
+    header {
+        padding: 20px 10px;
+    }
+.veille-title{
+    display: none;
+}
+   
+
+    main .content {
+        display: none;
+    }
+
+
+
+    main .bouton {
+        display: inline-block;
+        margin: 20px auto 0 auto;
+        font-size: 15px;
+        padding: 10px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+  
+/* --------------------------------------stage----------------------------------------------- */
+
+#stage{
+    background-color: #DDD3CB;
+}
+.stages-wrapper {
+    display: flex;
+    justify-content: space-between; /* Centre les éléments */
+    gap: 40px; /* Espace entre les deux stages */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: stretch;
+
+}
+
+.stage-container {
+    padding: 30px; /* Plus d'espace à l'intérieur */
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    width: 48%; /* Pour éviter qu'ils prennent toute la largeur */  
+}
+
+.stage-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stage-1 {
+    background-color: #f8f8f8;
+}
+
+.stage-2 {
+    background-color: #e57353;
+    color: white;
+}
+
+/* Ajustement du titre */
+.stage-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Badge de date */
+.date {
+    background: rgba(255, 87, 51, 0.2); /* Couleur plus douce */
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.stage-1 .date {
+    color: #e57353;
+}
+
+.stage-2 .date {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Ajustement de la description */
+.description {
+    font-size: 1em;
+    margin-top: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.stage-2 .description {
+    color: white;
+}
+
+/* Bouton stylisé */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid currentColor;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+    transition: all 0.3s ease-in-out;
+    align-self: flex-end; /* Pour garder le bouton en bas */
+}
+
+.stage-1 .btn {
+    color: #e57353;
+    border-color: #e57353;
+    background-color: transparent;
+}
+
+.stage-1 .btn:hover {
+    background-color: #e57353;
+    color: white;
+}
+
+.stage-2 .btn {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+
+.stage-2 .btn:hover {
+    background-color: white;
+    color: #e57353;
+}
+/* epreuve e4  */
+
+.epreuve-e4-image {
+    width: 500px; /* ou autre taille comme 150px, 50% etc. */
+    height: 10%; /* pour garder les proportions */
+  }
+
+#EpreuveE4{
+    background-color: #DDD3CB;}
+.epreuve-e4 h2 {
+    color: #e57353;
+    font-size: 2em;
+   
+}
+
+.epreuve-e4-image {
+    display: block;
+    margin: 20px auto; /* centre l’image horizontalement */
+    width: 300px;       /* tu peux mettre 200px ou 400px si tu veux */
+    height: auto;       /* garde les proportions */
+    border-radius: 10px;
+  }
+  
