@@ -80,12 +80,12 @@ PORTFOLIO/                                                     # Dossier princip
  
 ## ⚙️ Structure du projet
 
-Cloner le dépôt Git :
-git clone https://github.com/Groupe6VNB/gestion-taches.git
-Copier le dossier dans htdocs de XAMPP.
-Importer le fichier SQL dans phpMyAdmin ( task_management_db.sql).
-Modifier les identifiants de connexion dans includes/config.php.
-Accéder à l’application via :http://localhost/gestiondestaches
+📥 Cloner le dépôt Git :
+git clone https://github.com/Groupe6VNB/Portfolio.git
+📂 Ouvrir le projet en local :
+Ouvrir le dossier du projet avec un éditeur de code (ex. : Visual Studio Code)
+Double-cliquer sur le fichier portfolio.html pour l’ouvrir dans votre navigateur
+OU clic droit → Ouvrir avec → votre navigateur préféré
 
 
 ## 🔍 Contenu principal
