@@ -853,10 +853,6 @@ main {
 }
 /* epreuve e4  */
 
-.epreuve-e4-image {
-    width: 500px; /* ou autre taille comme 150px, 50% etc. */
-    height: 10%; /* pour garder les proportions */
-  }
 
 #EpreuveE4{
     background-color: #DDD3CB;}

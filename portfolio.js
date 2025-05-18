@@ -10,7 +10,7 @@ function openModal(contentId) {
     content = `
       <h2>Développement Web</h2>
       <p>Voici les détails sur mes projets en développement web...</p>
-      <a href="docs/projet-web.pdf" target="_blank" class="btn">Voir le PDF</a>
+      <a href="https://github.com/Groupe6VNB" class="btn">Voir le github</a>
     `;
   } else if (contentId === "cybersecurity") {
     content = `
@@ -32,12 +32,16 @@ function openModal(contentId) {
     content = `
        <h2>Réseau</h2>
       <p>Voici les détails sur mes projets en réseau...</p>
-      <a href="TpAudit AD.pdf" target="_blank" class="btn">Voir le PDF</a>
-      <a href="docs/projet-reseau.pdf" target="_blank" class="btn">Voir le PDF</a>
-      <a href="docs/projet-reseau.pdf" target="_blank" class="btn">Voir le PDF</a>
-      <a href="docs/projet-reseau.pdf" target="_blank" class="btn">Voir le PDF</a>
-      <a href="docs/projet-reseau.pdf" target="_blank" class="btn">Voir le PDF</a>
-      <a href="docs/projet-reseau.pdf" target="_blank" class="btn">Voir le PDF</a>
+      <a href="Document /TpReseau/Tp Serveur DHCP.pdf" target="_blank" class="btn">TP DHCP</a>
+      <a href="Document /TpReseau/Tp mise en place de RAID5.pdf" target="_blank" class="btn">Voir TP dossier partagé</a>
+      <a href="Document /TpReseau/Création d'utilisateur sur GLPI.pdf" target="_blank" class="btn">création utilisateur GLPI</a>
+      <a href="Document /TpReseau/Créatin ticket GLPI.pdf" target="_blank" class="btn">Voir Tp creation de ticket GLPI</a>
+      <a href="Document /TpReseau/Copie de Création GPO.pdf" target="_blank" class="btn">Voir Tp GPO</a>
+      <a href="Document /TpReseau/Ajout image GPO.pdf" target="_blank" class="btn">Voir Tp Ajout Image GPO</a>
+      <a href="Document /TpReseau/blocage de l'acces au paneau de configuration.pdf" target="_blank" class="btn">Tp blocage acces GPO</a>
+   
+
+
     `;
   }
 
@@ -113,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*stage*/
-
 
     document.addEventListener("DOMContentLoaded", function () {
         const card = document.querySelector('.cardd');

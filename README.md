@@ -77,7 +77,15 @@ PORTFOLIO/                                                     # Dossier princip
 ├── portfolio.js                                                  # Fichier JavaScript pour ajouter des interactions (contrôleur)
 └── README.md                                             # Fichier Markdown pour documenter le projet
 
+  
+## ⚙️ Structure du projet
 
+📥 Cloner le dépôt Git :
+git clone https://github.com/Groupe6VNB/Portfolio.git
+📂 Ouvrir le projet en local :
+Ouvrir le dossier du projet avec un éditeur de code (ex. : Visual Studio Code)
+Double-cliquer sur le fichier portfolio.html pour l’ouvrir dans votre navigateur
+OU clic droit → Ouvrir avec → votre navigateur préféré
 ---
 
 ## 🔍 Contenu principal
